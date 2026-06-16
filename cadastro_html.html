@@ -1,0 +1,32 @@
+<a href="cadastro_html.html">
+  Criar conta
+</a>
+<textarea id="texto"></textarea>
+<button>Publicar</button>
+<script>
+async function publicar() {
+
+  const texto =
+    document.getElementById("texto").value;
+
+  const imagem =
+    document.getElementById("imagem").value;
+
+  await fetch(
+    "https://SEU-BACKEND.vercel.app/api/posts",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        usuario_id: localStorage.getItem("usuario_id"),
+        texto,
+        imagem
+      })
+    }
+  );
+
+  alert("Post publicado!");
+}
+</script>

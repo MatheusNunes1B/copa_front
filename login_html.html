@@ -70,5 +70,26 @@
     </div>
     <p class="text-center text-gray-500 text-sm mt-6">Não tem uma conta? <a href="#" class="text-[#f5c518] font-semibold hover:underline ml-1">Cadastre-se</a></p>
   </div>
+  <button onclick="login()">Entrar</button>
+
+<script>
+async function login() {
+
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  await fetch('https://SEU-BACKEND.vercel.app/api/auth/login',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json'
+    },
+    body:JSON.stringify({
+      email,
+      password
+    })
+  });
+
+}
+</script>
 </body>
 </html>
