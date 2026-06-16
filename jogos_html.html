@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogos da Copa – Diário do Torcedor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:{green:'#1a7a2e',yellow:'#f5c518',dark:'#0d0d0d',card:'#161616',border:'#2a2a2a'}}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>body{background:#0d0d0d;font-family:'Inter',sans-serif;}::-webkit-scrollbar{width:0;}</style>
+</head>
+<body class="min-h-screen text-white flex justify-center">
+<div class="w-full max-w-sm flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-[#0d0d0d]/95 backdrop-blur border-b border-[#2a2a2a] flex items-center justify-between px-4 py-3">
+    <a href="index_html.html" class="text-gray-400 hover:text-white">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+    </a>
+    <div class="flex items-center gap-2">
+      <span class="text-[#f5c518] text-lg">🏆</span>
+      <h1 class="font-bold text-base">Jogos da Copa</h1>
+    </div>
+    <button class="text-gray-400 hover:text-white">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35"/></svg>
+    </button>
+  </header>
+
+  <!-- Phase Filter -->
+  <div class="flex gap-2 px-4 py-3 overflow-x-auto border-b border-[#2a2a2a]">
+    <button class="flex-shrink-0 bg-[#f5c518] text-black text-xs font-bold px-3 py-1.5 rounded-full">Todos</button>
+    <button class="flex-shrink-0 bg-[#161616] border border-[#2a2a2a] text-gray-400 text-xs px-3 py-1.5 rounded-full hover:border-[#f5c518] transition">Grupos</button>
+    <button class="flex-shrink-0 bg-[#161616] border border-[#2a2a2a] text-gray-400 text-xs px-3 py-1.5 rounded-full hover:border-[#f5c518] transition">Oitavas</button>
+    <button class="flex-shrink-0 bg-[#161616] border border-[#2a2a2a] text-gray-400 text-xs px-3 py-1.5 rounded-full hover:border-[#f5c518] transition">Quartas</button>
+    <button class="flex-shrink-0 bg-[#161616] border border-[#2a2a2a] text-gray-400 text-xs px-3 py-1.5 rounded-full hover:border-[#f5c518] transition">Semi</button>
+    <button class="flex-shrink-0 bg-[#161616] border border-[#2a2a2a] text-gray-400 text-xs px-3 py-1.5 rounded-full hover:border-[#f5c518] transition">Final</button>
+  </div>
+
+  <!-- Matches -->
+  <div class="flex-1 overflow-y-auto pb-24 px-4 py-4 space-y-5">
+
+    <!-- Hoje -->
+    <div>
+      <h2 class="text-white font-bold text-sm mb-3 flex items-center gap-2">
+        <span class="w-2 h-2 bg-[#f5c518] rounded-full animate-pulse"></span>Hoje
+      </h2>
+      <!-- Brasil vs Sérvia -->
+      <div class="bg-[#161616] rounded-2xl border border-[#2a2a2a] overflow-hidden mb-3">
+        <div class="bg-[#1a7a2e]/20 px-4 py-1.5 flex justify-between text-xs text-gray-400">
+          <span>Grupo G · Lusail Stadium</span>
+          <span class="text-[#f5c518] font-semibold">● AO VIVO</span>
+        </div>
+        <div class="flex items-center justify-between px-5 py-4">
+          <div class="flex flex-col items-center gap-2 w-20">
+            <img src="https://flagcdn.com/w80/br.png" class="w-14 h-9 object-cover rounded-md shadow" alt="Brasil" />
+            <span class="text-white font-semibold text-sm text-center">Brasil</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <div class="bg-[#0d0d0d] rounded-xl px-5 py-2">
+              <span class="text-[#f5c518] font-black text-2xl tracking-wider">16:00</span>
+            </div>
+            <span class="text-gray-500 text-xs">Grupo G</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 w-20">
+            <img src="https://flagcdn.com/w80/rs.png" class="w-14 h-9 object-cover rounded-md shadow" alt="Sérvia" />
+            <span class="text-white font-semibold text-sm text-center">Sérvia</span>
+          </div>
+        </div>
+        <div class="px-4 pb-3 flex justify-end">
+          <button class="text-xs text-[#f5c518] border border-[#f5c518]/30 rounded-full px-3 py-1 hover:bg-[#f5c518]/10 transition">+ Lembrete</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amanhã -->
+    <div>
+      <h2 class="text-white font-bold text-sm mb-3 flex items-center gap-2">
+        <span class="w-2 h-2 bg-[#2a2a2a] rounded-full"></span>Amanhã
+      </h2>
+      <div class="bg-[#161616] rounded-2xl border border-[#2a2a2a] overflow-hidden mb-3">
+        <div class="px-4 py-1.5 text-xs text-gray-500 border-b border-[#2a2a2a]">Grupo H · Stadium 974</div>
+        <div class="flex items-center justify-between px-5 py-4">
+          <div class="flex flex-col items-center gap-2 w-20"><img src="https://flagcdn.com/w80/pt.png" class="w-14 h-9 object-cover rounded-md shadow" alt="Portugal" /><span class="text-white font-semibold text-sm">Portugal</span></div>
+          <div class="flex flex-col items-center gap-1">
+            <div class="bg-[#0d0d0d] rounded-xl px-5 py-2"><span class="text-white font-black text-2xl tracking-wider">13:00</span></div>
+            <span class="text-gray-500 text-xs">Grupo H</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 w-20"><img src="https://flagcdn.com/w80/gh.png" class="w-14 h-9 object-cover rounded-md shadow" alt="Gana" /><span class="text-white font-semibold text-sm">Gana</span></div>
+        </div>
+        <div class="px-4 pb-3 flex justify-end">
+          <button class="text-xs text-gray-400 border border-[#2a2a2a] rounded-full px-3 py-1 hover:border-[#f5c518] hover:text-[#f5c518] transition">+ Lembrete</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Próximos -->
+    <div>
+      <h2 class="text-white font-bold text-sm mb-3 flex items-center gap-2">
+        <span class="w-2 h-2 bg-[#2a2a2a] rounded-full"></span>Próximos jogos
+      </h2>
+
+      <!-- Mini card style -->
+      <div class="space-y-2">
+        <div class="bg-[#161616] rounded-xl border border-[#2a2a2a] flex items-center justify-between px-4 py-3">
+          <div class="flex items-center gap-2"><img src="https://flagcdn.com/w40/fr.png" class="w-8 h-5 object-cover rounded shadow" alt="França" /><span class="text-white text-sm font-semibold">França</span></div>
+          <div class="text-center"><p class="text-gray-400 text-xs">22/11 · 13h</p><p class="text-white font-bold text-xs">vs</p></div>
+          <div class="flex items-center gap-2"><span class="text-white text-sm font-semibold">Austrália</span><img src="https://flagcdn.com/w40/au.png" class="w-8 h-5 object-cover rounded shadow" alt="Austrália" /></div>
+          <button class="text-gray-500 hover:text-[#f5c518] ml-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          </button>
+        </div>
+
+        <div class="bg-[#161616] rounded-xl border border-[#2a2a2a] flex items-center justify-between px-4 py-3">
+          <div class="flex items-center gap-2"><img src="https://flagcdn.com/w40/ar.png" class="w-8 h-5 object-cover rounded shadow" alt="Argentina" /><span class="text-white text-sm font-semibold">Argentina</span></div>
+          <div class="text-center"><p class="text-gray-400 text-xs">22/11 · 16h</p><p class="text-white font-bold text-xs">vs</p></div>
+          <div class="flex items-center gap-2"><span class="text-white text-sm font-semibold">México</span><img src="https://flagcdn.com/w40/mx.png" class="w-8 h-5 object-cover rounded shadow" alt="México" /></div>
+          <button class="text-gray-500 hover:text-[#f5c518] ml-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          </button>
+        </div>
+
+        <div class="bg-[#161616] rounded-xl border border-[#2a2a2a] flex items-center justify-between px-4 py-3">
+          <div class="flex items-center gap-2"><img src="https://flagcdn.com/w40/es.png" class="w-8 h-5 object-cover rounded shadow" alt="Espanha" /><span class="text-white text-sm font-semibold">Espanha</span></div>
+          <div class="text-center"><p class="text-gray-400 text-xs">23/11 · 10h</p><p class="text-white font-bold text-xs">vs</p></div>
+          <div class="flex items-center gap-2"><span class="text-white text-sm font-semibold">Costa Rica</span><img src="https://flagcdn.com/w40/cr.png" class="w-8 h-5 object-cover rounded shadow" alt="Costa Rica" /></div>
+          <button class="text-gray-500 hover:text-[#f5c518] ml-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          </button>
+        </div>
+
+        <div class="bg-[#161616] rounded-xl border border-[#2a2a2a] flex items-center justify-between px-4 py-3">
+          <div class="flex items-center gap-2"><img src="https://flagcdn.com/w40/de.png" class="w-8 h-5 object-cover rounded shadow" alt="Alemanha" /><span class="text-white text-sm font-semibold">Alemanha</span></div>
+          <div class="text-center"><p class="text-gray-400 text-xs">23/11 · 13h</p><p class="text-white font-bold text-xs">vs</p></div>
+          <div class="flex items-center gap-2"><span class="text-white text-sm font-semibold">Japão</span><img src="https://flagcdn.com/w40/jp.png" class="w-8 h-5 object-cover rounded shadow" alt="Japão" /></div>
+          <button class="text-gray-500 hover:text-[#f5c518] ml-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          </button>
+        </div>
+
+        <div class="bg-[#161616] rounded-xl border border-[#2a2a2a] flex items-center justify-between px-4 py-3">
+          <div class="flex items-center gap-2"><img src="https://flagcdn.com/w40/be.png" class="w-8 h-5 object-cover rounded shadow" alt="Bélgica" /><span class="text-white text-sm font-semibold">Bélgica</span></div>
+          <div class="text-center"><p class="text-gray-400 text-xs">23/11 · 16h</p><p class="text-white font-bold text-xs">vs</p></div>
+          <div class="flex items-center gap-2"><span class="text-white text-sm font-semibold">Canadá</span><img src="https://flagcdn.com/w40/ca.png" class="w-8 h-5 object-cover rounded shadow" alt="Canadá" /></div>
+          <button class="text-gray-500 hover:text-[#f5c518] ml-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Nav -->
+  <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-sm bg-[#0d0d0d]/95 backdrop-blur border-t border-[#2a2a2a] flex items-center justify-around py-2 z-50">
+    <a href="index_html.html" class="flex flex-col items-center gap-1 text-gray-500">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      <span class="text-[10px]">Início</span>
+    </a>
+    <a href="jogos_html.html" class="flex flex-col items-center gap-1 text-[#f5c518]">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2c1.1 0 2.16.18 3.15.51L13 7h-2L9.5 5.08A7.96 7.96 0 0112 4zM7.1 6.14L9 8.5l-1.5 3H5.08A8.02 8.02 0 017.1 6.14zm9.8 0a8.02 8.02 0 012.02 5.36H16.5L15 8.5l1.9-2.36zM11 9h2l1.5 3-1.5 3h-2L9.5 12 11 9zm-4.5 4H8l1.5 3-1.6 2.28A8.01 8.01 0 014.1 13H6.5zm8 0H17a8.01 8.01 0 01-3.9 5.28L11.5 16l1.5-3h1.5z"/></svg>
+      <span class="text-[10px] font-medium">Jogos</span>
+    </a>
+    <a href="index_html.html" class="w-12 h-12 bg-[#f5c518] rounded-full flex items-center justify-center shadow-lg -mt-4">
+      <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+    </a>
+    <a href="chat_html.html" class="flex flex-col items-center gap-1 text-gray-500 relative">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+      <span class="absolute -top-1 left-5 bg-red-500 text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center">6</span>
+      <span class="text-[10px]">Chat</span>
+    </a>
+    <a href="perfil_html.html" class="flex flex-col items-center gap-1 text-gray-500">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+      <span class="text-[10px]">Perfil</span>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>

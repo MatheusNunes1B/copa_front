@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil – Diário do Torcedor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:{green:'#1a7a2e',yellow:'#f5c518',dark:'#0d0d0d',card:'#161616',border:'#2a2a2a'}}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>body{background:#0d0d0d;font-family:'Inter',sans-serif;}::-webkit-scrollbar{width:0;}</style>
+</head>
+<body class="min-h-screen text-white flex justify-center">
+<div class="w-full max-w-sm flex flex-col min-h-screen">
+
+  <!-- Hero Banner -->
+  <div class="relative h-44 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400&h=176&fit=crop" class="w-full h-full object-cover opacity-70" />
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0d0d0d]/80"></div>
+    <div class="absolute top-0 left-0 right-0 flex justify-between px-4 pt-4">
+      <a href="index_html.html" class="w-8 h-8 bg-black/50 rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      </a>
+      <button class="w-8 h-8 bg-black/50 rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Profile Info -->
+  <div class="px-4 pb-4 bg-[#0d0d0d] relative">
+    <div class="absolute -top-12 left-4 w-24 h-24 rounded-full border-4 border-[#0d0d0d] overflow-hidden bg-[#161616] ring-2 ring-[#1a7a2e]">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=face" class="w-full h-full object-cover" />
+    </div>
+    <div class="pt-14">
+      <div class="flex items-center gap-2">
+        <h2 class="text-white font-bold text-xl">@gui-costa</h2>
+        <svg class="w-5 h-5 text-[#f5c518]" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <p class="text-gray-400 text-sm mt-0.5 flex items-center gap-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+        Rio de Janeiro, RJ
+      </p>
+      <p class="text-gray-300 text-sm mt-2 leading-relaxed">Apaixonado por futebol e por momentos inesquecíveis. 💚🏆<br/>Rumo ao Hexa! 🏆</p>
+      <div class="flex gap-6 mt-4">
+        <div class="text-center"><p class="text-white font-bold text-base">128</p><p class="text-gray-500 text-xs">Publicações</p></div>
+        <div class="text-center"><p class="text-white font-bold text-base">1.245</p><p class="text-gray-500 text-xs">Seguidores</p></div>
+        <div class="text-center"><p class="text-white font-bold text-base">987</p><p class="text-gray-500 text-xs">Seguindo</p></div>
+      </div>
+      <div class="flex gap-3 mt-4">
+        <button class="flex-1 bg-[#1a7a2e] text-white font-semibold py-3 rounded-xl text-sm flex items-center justify-center gap-2 hover:brightness-110 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+          Editar perfil
+        </button>
+        <button class="bg-[#161616] border border-[#2a2a2a] text-white font-semibold py-3 px-4 rounded-xl text-sm hover:border-[#f5c518] transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Links -->
+  <div class="flex justify-around px-4 py-4 border-y border-[#2a2a2a] bg-[#161616]">
+    <div class="flex flex-col items-center gap-1"><div class="w-12 h-12 bg-[#f5c518]/20 rounded-full flex items-center justify-center text-xl">🏆</div><span class="text-[10px] text-gray-400">Copa 2022</span></div>
+    <div class="flex flex-col items-center gap-1"><div class="w-12 h-12 bg-[#1a7a2e]/20 rounded-full flex items-center justify-center text-xl">🏟️</div><span class="text-[10px] text-gray-400">Estádios</span></div>
+    <div class="flex flex-col items-center gap-1"><div class="w-12 h-12 bg-blue-900/30 rounded-full flex items-center justify-center text-xl">👥</div><span class="text-[10px] text-gray-400">Amigos</span></div>
+    <div class="flex flex-col items-center gap-1"><div class="w-12 h-12 bg-purple-900/30 rounded-full flex items-center justify-center text-xl">✈️</div><span class="text-[10px] text-gray-400">Viagens</span></div>
+  </div>
+
+  <!-- Grid Tabs -->
+  <div class="flex border-b border-[#2a2a2a]">
+    <button class="flex-1 py-3 flex items-center justify-center border-b-2 border-[#f5c518] text-white">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    </button>
+    <button class="flex-1 py-3 flex items-center justify-center text-gray-500">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+    </button>
+    <button class="flex-1 py-3 flex items-center justify-center text-gray-500">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    </button>
+  </div>
+
+  <!-- Photo Grid -->
+  <div class="grid grid-cols-3 gap-0.5 pb-24">
+    <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=150&h=150&fit=crop" class="w-full aspect-square object-cover" />
+    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=150&h=150&fit=crop" class="w-full aspect-square object-cover" />
+    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=150&h=150&fit=crop" class="w-full aspect-square object-cover" />
+    <img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?w=150&h=150&fit=crop" class="w-full aspect-square object-cover" />
+    <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=150&h=150&fit=crop" class="w-full aspect-square object-cover" />
+    <img src="https://images.unsplash.com/photo-1551958219-acbc595ea9cd?w=150&h=150&fit=crop" class="w-full aspect-square object-cover" />
+    <img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=150&h=150&fit=crop" class="w-full aspect-square object-cover" />
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=150&fit=crop" class="w-full aspect-square object-cover" />
+    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=150&h=150&fit=crop" class="w-full aspect-square object-cover" />
+  </div>
+
+  <!-- Bottom Nav -->
+  <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-sm bg-[#0d0d0d]/95 backdrop-blur border-t border-[#2a2a2a] flex items-center justify-around py-2 z-50">
+    <a href="index_html.html" class="flex flex-col items-center gap-1 text-gray-500">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      <span class="text-[10px]">Início</span>
+    </a>
+    <a href="jogos_html.html" class="flex flex-col items-center gap-1 text-gray-500">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/></svg>
+      <span class="text-[10px]">Jogos</span>
+    </a>
+    <a href="index_html.html" class="w-12 h-12 bg-[#f5c518] rounded-full flex items-center justify-center shadow-lg -mt-4">
+      <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+    </a>
+    <a href="chat_html.html" class="flex flex-col items-center gap-1 text-gray-500 relative">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+      <span class="absolute -top-1 left-5 bg-red-500 text-white text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center">6</span>
+      <span class="text-[10px]">Chat</span>
+    </a>
+    <a href="perfil_html.html" class="flex flex-col items-center gap-1 text-[#f5c518]">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+      <span class="text-[10px] font-medium">Perfil</span>
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>
