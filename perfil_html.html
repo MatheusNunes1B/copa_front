@@ -33,13 +33,10 @@
     </div>
     <div class="pt-14">
       <div class="flex items-center gap-2">
-        <h2 class="text-white font-bold text-xl">@gui-costa</h2>
+        <h2 id="perfil-nome" class="text-white font-bold text-xl">@torcedor</h2>
         <svg class="w-5 h-5 text-[#f5c518]" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
       </div>
-      <p class="text-gray-400 text-sm mt-0.5 flex items-center gap-1">
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
-        Rio de Janeiro, RJ
-      </p>
+      <p id="perfil-email" class="text-gray-400 text-sm mt-0.5"></p>
       <p class="text-gray-300 text-sm mt-2 leading-relaxed">Apaixonado por futebol e por momentos inesquecíveis. 💚🏆<br/>Rumo ao Hexa! 🏆</p>
       <div class="flex gap-6 mt-4">
         <div class="text-center"><p class="text-white font-bold text-base">128</p><p class="text-gray-500 text-xs">Publicações</p></div>
@@ -117,5 +114,28 @@
   </nav>
 
 </div>
+
+<script>
+  // Preenche o perfil com os dados do usuário logado
+  const nome = localStorage.getItem('usuario_nome') || 'Torcedor';
+  const email = localStorage.getItem('usuario_email') || '';
+
+  // Formata nome como @usuario sem espaços
+  const nomeFormatado = '@' + nome.toLowerCase().replace(/\s+/g, '');
+  document.getElementById('perfil-nome').textContent = nomeFormatado;
+  document.getElementById('perfil-email').textContent = email;
+
+  // Atualiza avatar com iniciais do nome
+  document.querySelectorAll('img[src*="1507003211169"]').forEach(img => {
+    img.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(nome)}&background=1a7a2e&color=fff&size=96`;
+  });
+
+  function sair() {
+    localStorage.removeItem('usuario_id');
+    localStorage.removeItem('usuario_nome');
+    localStorage.removeItem('usuario_email');
+    window.location.href = 'login_html.html';
+  }
+</script>
 </body>
 </html>
